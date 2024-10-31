@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars Rover Photos</title>
+    <style>@import url("./css/index.css"); </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Div 1: Mars Rover Photos Section -->
+        <div class="box">
+            <h1>Mars Rover Photos</h1>
+            <div class="form-group">
+                <label for="date">Earth date:</label>
+                <input type="date" id="date" name="date">
+                <button onclick="fetchMarsPhotos()">Find</button>
+            </div>
+            <table id="photosTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Rover Name</th>
+                        <th>Camera</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí se agregarán las filas de datos -->
+                </tbody>
+            </table>
+            <div class="navigation-buttons">
+                <button onclick="previousPage()" id="previousButton" disabled>Previous</button>
+                <button onclick="nextPage()" id="nextButton" disabled>Next</button>
+            </div>
+        </div>
+
+        <!-- Div 2: Contenido adicional -->
+        <div class="box">
+            <div class="photo-details" id="photoDetails">
+                <h1>Photo Details</h1>
+                <img id="detailImage" src="" alt="Photo">
+                <div class="details">
+                    <div><strong>ID:</strong> <span id="detailId"></span></div>
+                    <div><strong>Martian sol:</strong> <span id="detailSol"></span></div>
+                    <div><strong>Earth date:</strong> <span id="detailEarthDate"></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/index.js" ></script>
+
+</body>
+</html>
